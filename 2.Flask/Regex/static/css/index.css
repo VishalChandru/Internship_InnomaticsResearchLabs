@@ -1,0 +1,73 @@
+
+/* Split the screen in half */
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: white;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color: red;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .tablecentered {
+    position: absolute;
+    top : 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 20px;
+  }
+
+/* If you want the heading centered horizontally and vertically */
+.textcenter {
+    position: absolute;
+    top : 30%;
+    left: 20%;
+    text-align: center;
+  }
+
+  input[type="submit"] 
+  {
+    all: unset; 
+    color: black; 
+    cursor: pointer; 
+    background-color: white;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px
+  }
+
+
+  input:hover[type="submit"] 
+  {
+      color: red;
+  }
+
+  table, th, td{
+    border:1px white;
+    border-radius:6px;
+    color: white;
+    text-align: center;
+    }
