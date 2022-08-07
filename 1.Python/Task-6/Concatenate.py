@@ -1,0 +1,5 @@
+import numpy
+n,m,p = map(int,input().strip().split(' '))
+arr1 = numpy.array([input().strip().split(' ') for _ in range(n)],int)
+arr2 = numpy.array([input().strip().split(' ') for _ in range(m)],int)
+print(numpy.concatenate((arr1,arr2)))
