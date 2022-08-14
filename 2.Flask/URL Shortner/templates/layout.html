@@ -1,0 +1,39 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+  	<title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="stylesheet" href="static/css/style.css">
+    <style>
+        
+        </style>
+	</head>
+	<body>
+        <nav class="navbar navbar-expand-sm">
+            <a class="navbar-brand" href="{{ url_for('index')}}">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- <nav>
+            <a href="/">Home</a>
+            <a href="/Login">Login</a>
+            <a href="/Credits">Credits</a>
+        </nav> -->
+    {% block body %}
+    {% endblock %}
+	</body>
+</html>
+

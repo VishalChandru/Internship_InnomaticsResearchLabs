@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block body %}
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6 text-center mb-5">
+				<h2 class="heading-section" style="color: #bc9864;">Innomatics Research Labs</h2>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-10 col-md-12">
+				<div class="wrapper">
+					<div class="row justify-content-center">
+						<div class="col-lg-8">
+							<div class="contact-wrap">
+								<h3 class="mb-4 text-center">URL Shortner</h3>
+								<form action = "{{ url_for('index')}}" method="POST" id="contactForm" name="contactForm" class="contactForm">
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<input type="text" class="form-control" name="url" id="url" value = "{{url}}" placeholder="Enter URL">
+											</div>
+										</div>
+											<div class="form-group" style="margin-left: 80%;">
+												<input type="submit" value="Shorten" class="btn btn-primary">
+												<div class="submitting"></div>
+											</div>
+									</div>
+								</form>
+								<br>
+								<p style="color: white;"> {{url_short}}</p> 
+								<br>
+								<br>
+								<div>
+									<a href="/copy/{{hashid}}"><input type="submit" value="Copy" class="btn btn-primary"></a>
+									<a href="{{ url_for('history')}}"><input type="submit" value="History" class="btn btn-primary"></a>
+								</div>
+								<a href="{{ url_for('delete')}}">Clear History</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
